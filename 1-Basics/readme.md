@@ -9,3 +9,6 @@
 - Recursion
 - Basic Floating Point operations
 - Saving on Stack
+
+
+`'I dont understand why programmers want more MIPS.'`
