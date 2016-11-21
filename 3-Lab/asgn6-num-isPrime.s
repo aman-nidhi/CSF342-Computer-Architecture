@@ -1,5 +1,5 @@
 #   
-#           "is Prime"
+#           "is a number Prime, checking a number is prime or not"
 #           Author: Aman Nidhi
 #           Year  : 2016
 #           
@@ -18,10 +18,9 @@ main:
                                     #
     li $v0, 5
     syscall
-    move $a0, $v0                   # pass the integer read as an argument into isPrime
+    move $a0, $v0                   # pass the integer read as an argument into isPrime, the prime function
 
     jal isPrime
-
     bne $v0, $zero, success         # if $v0 == 1, then prime, branch to print success message
 
     li $v0, 4
