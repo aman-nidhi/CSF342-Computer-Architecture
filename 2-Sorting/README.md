@@ -7,6 +7,9 @@
 - Quick Sort
 - Heap Sort
 - Dutch national flag problem (DNF) 
+- Comb Sort
+- Bucket Sort
+
 
 ## Contribute
-like this repo, share this repo.
+`Like this repo! Share this repo!`
