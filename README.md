@@ -4,7 +4,7 @@ This repository is meant to help someone learn MIPS32 Assembly programming. The 
 
 All codes were tested using the QtSPIM Simulator and in Simple Machine Settings. If you want to have proper knowledge in MIPS Architecture then program in Bare Machine Settings that will help you program the real MIPS processor.
 
-If you do refer any material here you must acknowledge the help and make reference to it. Feel free if you find any bug/flaw.
+If you do refer any material here you must acknowledge the help and make reference to it. Feel free if you find any bug.
 
 
 Enjoy!
@@ -17,6 +17,8 @@ Enjoy!
   - [MIPS Instruction Reference](http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html) - Good reference for MIPS.
 
   - [MIPS Instruction Set](https://en.wikipedia.org/wiki/MIPS_instruction_set) - Wikipedia.
+
+  - [Resource Folder](https://github.com/chrislgarry/Apollo-11.git) - My files in this repository.
 
 
 ## Contribute
