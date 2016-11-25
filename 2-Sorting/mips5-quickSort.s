@@ -6,14 +6,14 @@
 # 
 # 
 .data
-    space:      .asciiz  " "            # a $space string.
-    line:       .asciiz "\n"            # a newline string.
-    colonsp:    .asciiz ": "            # a colon string with $space.
+    space:          .asciiz  " "            # a $space string.
+    line:           .asciiz "\n"            # a newline string.
+    colonsp:        .asciiz ": "            # a colon string with $space.
     .align 2
-    array:      .word   0 : 1000        # an ar$ray of word, for storing values.
-    # array:      .word 34 5 88 4 56 98 7  70 23 63 44 87   # sample array 12 samples
-    # array:      .word 6 7 2 4 3         # sample array
-    size:       .word   12              # actual count of the elements in the ar$ray.
+    array:          .word   0 : 1000        # an ar$ray of word, for storing values.
+    # array:        .word 34 5 88 4 56 98 7  70 23 63 44 87   # sample array 12 samples
+    # array:        .word 6 7 2 4 3         # sample array
+    size:           .word   12              # actual count of the elements in the ar$ray.
                             
     question:               .asciiz "Input number of values to be sorted (0 < N < 1000): "
     instruct:               .asciiz "Input each value: "
