@@ -1,23 +1,23 @@
 # 
 # 
-#       "Selection Sort"
+#       "Selection Sort in MIPS"
 #       Author: Aman Nidhi
 #       Year  : 2016
 # 
 # 
 .data
-    space:  	.asciiz " "         # a space string.
-    line:   	.asciiz "\n"        # a newline string.
-    colonsp:    .asciiz ": "    	# a colon string with space.
+    space:          .asciiz " "         # a space string.
+    line:           .asciiz "\n"        # a newline string.
+    colonsp:        .asciiz ": "        # a colon string with space.
     .align 2
-    array:  	.word   0 : 1000    # an array of word, for storing values.
-    # array:  	.word 45 44 43 
-    size:   	.word   3           # actual count of the elements in the array.
-
-    question:  	.asciiz "Input number of values to be sorted (0 < N < 1000): "
-    instruct:   .asciiz "Input each value: "
+    array:          .word   0 : 1000    # an array of word, for storing values.
+    # array:  	   .word 45 44 43 
+    size:           .word   3           # actual count of the elements in the array.
+                    
+    question:       .asciiz "Input number of values to be sorted (0 < N < 1000): "
+    instruct:       .asciiz "Input each value: "
     receive_values_loop_iter_string:    .asciiz "Input value#"
-    sorted_array_string:    			.asciiz "Sorted:\n"
+    sorted_array_string:                .asciiz "Sorted:\n"
     unsorted_array_string:              .asciiz "Unsorted:\n"
 
 
@@ -69,9 +69,12 @@ main:
     receive_values_end:
         la $a0, unsorted_array_string
         li $v0, 4
+        syscall
         jal print               # printing user input values
 
-        j def_Selection_Sort
+        jal def_Selection_Sort
+        jal print
+        j exit
 
 
 ###  Selection sort
@@ -82,9 +85,9 @@ sort_prep:
     addi $t7, $t1, -1           # t7 = size -1 
     li  $t2, 0                  # outer loop iter 
     li  $t3, 1                  # inner loop iter starts at one place after the outer loop 
-    				
+
 outer_loop:
-	la  $t0, array              # address of array
+    la  $t0, array              # address of array
     bge $t2, $t7, outer_loop_end        # t2 outer loop iter 
 
     inner_loop:
@@ -93,20 +96,20 @@ outer_loop:
         mul $t4, $t2, 4         # index i: outer iter
         add $t4, $t4, $t0       # index address of ith element
         add $a0, $zero, $t4
-        lw $t4, ($t4)		    # last in the stack
+        lw $t4, ($t4)           # last in the stack
 
-        mul $t5, $t3, 4		
-        add $t5, $t5, $t0	    # index j
+        mul $t5, $t3, 4
+        add $t5, $t5, $t0       # index j
         add $a1, $zero, $t5
         lw $t5, ($t5)           #
         
         bgt $t4, $t5, swap
 
     swap_return:
-    	addi $t3, $t3, 1
+        addi $t3, $t3, 1
         j inner_loop
                                 #    
-    inner_loop_end:                 			
+    inner_loop_end:          
         addi $t2, $t2, 1        # inc outer iter t2
         addi $t3, $t2, 1
         j outer_loop
@@ -124,12 +127,12 @@ outer_loop_end:
     syscall
     la $a0, sorted_array_string
     syscall
-    jal print
-                                    #
+    jr $ra
+  
+
 exit:
     li  $v0, 10                 # 10 = exit syscall.
     syscall                     # issue a system call.
-
 
 ###       Printing
 print:
@@ -153,3 +156,4 @@ print:
         la  $a0, line
         syscall
         jr  $ra
+        
