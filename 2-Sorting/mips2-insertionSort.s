@@ -1,21 +1,20 @@
 # 
 # 
-#       "Insertion Sort"
+#       "Insertion Sort in MIPS"
 #       Author: Aman Nidhi
 #       Year  : 2016
 # 
 # 
-.data
-                                    #
-    space:      .asciiz  " "        # a space string.
-    line:       .asciiz "\n"        # a newline string.
-    colonsp:    .asciiz ": "        # a colon string with space.
-    array:      .word   0 : 1000    # an array of word, for storing values.
-    # array:  	.word 34 5 88 4 56 98 7
-    size:       .word   7           # actual count of the elements in the array.
+.data    
+    space:          .asciiz  " "        # a space string.
+    line:           .asciiz "\n"        # a newline string.
+    colonsp:        .asciiz ": "        # a colon string with space.
+    array:          .word   0 : 1000    # an array of word, for storing values.
+    # array:  	     .word 34 5 88 4 56 98 7
+    size:           .word   7           # actual count of the elements in the array.
 
-    question:  		.asciiz "Input number of values to be sorted (0 < N < 1000): "
-    instruct:    	.asciiz "Input each value: "
+    question:       .asciiz "Input number of values to be sorted (0 < N < 1000): "
+    instruct:       .asciiz "Input each value: "
     receive_values_loop_iter_string:    .asciiz "Input value#"
     sorted_array_string:                .asciiz "Sorted:"
 
@@ -105,11 +104,11 @@ sort_xloop_end:
     la  $a0, line           # load line to argument register $a0.
     syscall                 # issue a system call.
     jal print               # call print routine.
+    
 
 exit:
     li  $v0, 10             # 10 = exit syscall.
     syscall                 # issue a system call.
-
 
 ###       Printing
 print:
