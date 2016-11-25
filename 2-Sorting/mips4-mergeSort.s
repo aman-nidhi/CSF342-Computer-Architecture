@@ -12,7 +12,7 @@
     array:          .word   0 : 1000    # an array of word, for storing values.
     # array:          .word 34 5 88 4 56 98 7  70 23 63 44 87   # sample array
     size:           .word   12          # actual count of the elements in the array. initialise to sample array length
-    									# but during the execution, it get updated by the user input
+                                        # but during the execution, it get updated by the user input
     question:       .asciiz "Input number of values to be sorted (0 < N < 1000): "
     instruct:       .asciiz "Input each value: "
     receive_values_loop_iter_string:    .asciiz "Input value#"
