@@ -1,6 +1,6 @@
 # 
 # 
-#       "Dutch national flag problem Sorting"
+#       "Dutch national flag problem Sorting Sorting in MIPS"
 #       Author: Aman Nidhi
 #       Year: 2016
 # 
@@ -41,7 +41,6 @@ DNFsort:
     add  $s1, $t0, $t5
     add  $s0, $zero, $t0
     addi $t2, $t0, 0
-
     loop:
         bgt $t2, $s1, loop_exit
         lw $t6, ($t2)
@@ -86,11 +85,11 @@ DNFsort:
         addi $s1, $s1, -4
         j swap2_ret
 
+
 # exit program
 exit:
     li $v0, 10
     syscall
-
 
 ###       Printing
 print:
