@@ -1,16 +1,16 @@
 # 
 # 
-#       "Bubble Sort"
+#       "Bubble Sort in MIPS"
 #       Author: Aman Nidhi
 #       Year  : 2016
 # 
 # 
 .data
-    space:      .asciiz " "         # a space string.
-    line:       .asciiz "\n"        # a newline string.
-    colonsp:    .asciiz ": "        # a colon string with space.
-    array:      .word   0 : 1000    # an array of word, for storing values.
-    size:       .word   5           # actual count of the elements in the array.
+    space:              .asciiz " "         # a space string.
+    line:               .asciiz "\n"        # a newline string.
+    colonsp:            .asciiz ": "        # a colon string with space.
+    array:              .word   0 : 1000    # an array of word, for storing values.
+    size:               .word   5           # actual count of the elements in the array.
     params_info_str:    .asciiz "Input number of values to be sorted (0 < N < 1000): \n"
     instruct:           .asciiz "Input each value: \n"
     input_values_loop_iter_string:      .asciiz "Your Input value # "
@@ -21,7 +21,6 @@
 .globl  main
 main:
     params_info:
-                                #
         li  $v0, 4              # 4 = print_string syscall.
         la  $a0, params_info_str   # load params_info_str to argument register $a0.
         syscall                 # issue a system call.
