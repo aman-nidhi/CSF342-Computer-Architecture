@@ -1,11 +1,20 @@
-Resourse/
+# folders
+Resourses/
+Resourses/verify
+
+# 
 4-Random/
-3-Lab/LAB
+4-Random/verify
+
+# 
 3-Lab/verify/
 
+# 
+2-Sorting/verify
+1-Basics/verify
 
+# files
 __test.s
-
 Project-Pipelined-Processor/*.docx
 *txt
 *pdf
