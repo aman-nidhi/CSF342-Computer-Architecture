@@ -1,3 +1,9 @@
+#   
+#           "Pass by reference"
+#           Author: Aman Nidhi
+#           Year  : 2016
+#           
+# 
 .data
     .align 2
     x:      .word 9
