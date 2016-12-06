@@ -1,14 +1,16 @@
-# MIPS32 Basics
+# MIPS32 Assembly Basics
 
-- Basic IO - string/integer/floating-point
-- Basic Math functions
-- Loops
-- Nested Loops
-- Funtion Call
-- Conditionals
-- Recursion
-- Basic Floating Point operations
-- Saving on Stack
+Some basics programming in MIPS Assembly:
+
+        - Basic IO - string/integer/floating-point in MIPS
+        - Basic Math functions in MIPS
+        - Loops in MIPS
+        - Nested Loops in MIPS
+        - Funtion Call in MIPS
+        - Conditionals in MIPS
+        - Recursion in MIPS
+        - Basic Floating Point operations in MIPS
+        - Saving on Stack in MIPS
 
 
 `'I dont understand why programmers want more MIPS.'`
