@@ -24,5 +24,5 @@ Enjoy!
 
 ## Contribute
 
-Contributions are always welcome!
-**If you have anything to add just commit it** :)
+Contributions are always welcome!               
+**If you have anything to add just merge your commits** :)
